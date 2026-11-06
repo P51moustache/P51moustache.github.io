@@ -10,8 +10,8 @@
   <header><div class="wrap">
     <div class="kicker">PUCKIQ</div>
     <h1>Privacy policy</h1>
-    <p>Effective October 6, 2026</p>
-    <nav><a href="index.html">Home</a><a href="support.html">Support</a></nav>
+    <p>Effective November 5, 2026</p>
+    <nav><a href="index.html">Home</a><a href="support.html">Support</a><a href="terms.html">Terms</a></nav>
   </div></header>
   <main class="wrap">
     <section>
@@ -20,7 +20,7 @@
         <li>PuckIQ works without an account. Your roster and settings stay on your phone unless you turn on backup or join a League Room.</li>
         <li>A League Room shares your team only with the members of that room. Player alerts use only your phone's push token and the NHL players you follow.</li>
         <li>No ads. No tracking across other apps or websites. We never sell your data.</li>
-        <li>Anonymous usage stats help us improve the app, and you can turn them off in Settings.</li>
+        <li>Usage stats tied to a random install ID help us improve the app, and you can turn them off in Settings.</li>
         <li>PuckIQ never signs in to your fantasy league and never changes your lineup.</li>
       </ul>
     </section>
@@ -45,38 +45,54 @@
       <p>Only members of that room can see it. Your team and reactions are deleted when you leave the room, when the room's owner removes you, or when you delete your account. A room is deleted when its last member leaves.</p>
 
       <h2>Player alerts</h2>
-      <p>If you turn on scratch or goal alerts, the app sends our server your phone's push token (issued by Apple through <strong>Expo</strong>, which delivers the notifications), the NHL player IDs you follow, which alerts you want, and the app version. They are not linked to your account. We use them only to send you an alert when one of those players is scratched or scores, plus a short log of alerts already sent so you never get the same one twice; that log is deleted after a few days. Turning alerts off removes your push token, your player list, and that log.</p>
+      <p>If you turn on scratch or goal alerts or the morning brief, the app sends our server your phone's push token (issued by Apple through <strong>Expo</strong>, which delivers the notifications), the NHL player IDs you follow, which alerts you want, your device's time zone, and the app version. They are not linked to your account. We use them only to send those alerts at the right time, plus a short log of alerts already sent so you never get the same one twice; that log is deleted after a few days. Turning alerts off removes your push token, your player list, and that log.</p>
 
       <h2>Purchases</h2>
       <p>PuckIQ Pro is sold through Apple. We never see your payment details. <strong>RevenueCat</strong> processes your subscription status using Apple's purchase receipts and an app user ID: an anonymous ID, or your PuckIQ account ID if you've signed in.</p>
 
-      <h2>Anonymous usage stats</h2>
-      <p>To learn which features are useful, the app sends usage events to <strong>PostHog</strong>: screens viewed and features used (for example, opening a player, adding a pickup, sharing a card, viewing the Pro screen), whether you're on Pro, the app version, and your device's operating system. These events are tied to a random ID created when you install the app. They are <strong>not</strong> linked to your account, email, or roster, and are never used for advertising.</p>
-      <p>Turn this off in <strong>Settings → About → Share anonymous usage stats</strong>.</p>
+      <h2>Usage stats</h2>
+      <p>To learn which features are useful and what breaks, the app sends usage events to <strong>PostHog</strong>:</p>
+      <ul>
+        <li>screens viewed and features used (for example, opening a player, adding a pickup, sharing a card, viewing the Pro screen), and how those loads performed;</li>
+        <li>your answers, if you answer an in-app survey;</li>
+        <li>your app version, device model, operating system version, time zone, and language and region setting;</li>
+        <li>counts and settings rather than contents: how many players and teams you have, your league platform and format, whether you're on Pro or a trial, and whether notifications are on;</li>
+        <li>crash and error reports, with personal details stripped before sending.</li>
+      </ul>
+      <p>These events are tied to a random ID created when you install the app, a session ID, and a short hash of your team's ID. They are <strong>not</strong> linked to your account, email, or roster, and are never used for advertising. PostHog is set not to store your IP address, and we don't record your screen.</p>
+      <p>Turn this off in <strong>Settings → About → Share usage stats</strong>.</p>
 
       <h2>Feedback</h2>
       <p>If you use <strong>Settings → About → Send feedback</strong>, we receive your message, the kind of feedback you picked, and, only if you type one, your email address so we can reply. The app attaches its version, your iOS version, your device model, and whether you're on Pro so we can reproduce problems. If you're signed in, the message is linked to your account ID. Feedback is stored with <strong>Supabase</strong> and used only to fix and improve PuckIQ.</p>
 
       <h2>Hockey data</h2>
-      <p>The app loads schedules, scores, and stats from the NHL's public data services, player photos from the NHL's image servers, and news headlines from ESPN's public feed. Like any website, those servers see your device's IP address when the app requests data. We don't send them anything about you.</p>
+      <p>The app loads schedules, scores, stats, and news headlines from PuckIQ's own data feed, hosted on <strong>Supabase</strong>, and player photos from the NHL's image servers. Tapping a headline opens the publisher's site. Like any website, those servers see your device's IP address when the app requests something, and our feed sees which player's data was requested. We don't send them anything else about you.</p>
+
+      <h2>Roster import</h2>
+      <p>A screenshot or text you import is read on your phone to find the players. It isn't sent to us.</p>
 
       <h2>Service providers</h2>
       <ul>
         <li><strong>Apple</strong>: purchases and Sign in with Apple</li>
-        <li><strong>Supabase</strong>: optional account, team backup, League Room, player alert settings, and feedback you send</li>
+        <li><strong>Supabase</strong>: hockey data feed, optional account, team backup, League Room, player alert settings, and feedback you send</li>
         <li><strong>Expo</strong>: delivers player alerts to your phone through Apple's push service</li>
         <li><strong>RevenueCat</strong>: subscription status</li>
-        <li><strong>PostHog</strong>: anonymous usage stats</li>
+        <li><strong>PostHog</strong>: usage stats</li>
+        <li><strong>The NHL</strong>: player photos, loaded directly from its image servers</li>
       </ul>
 
       <h2>Retention</h2>
-      <p>Your backup is kept until you delete your account. League Room data is kept while you're a member (reactions for 7 days). Player alert settings are kept until you turn alerts off, or until Apple tells us the push token no longer works. Feedback is kept until it's no longer needed to follow up or improve the app; email us to have yours deleted sooner. Anonymous usage events are kept only as long as they're useful for improving the app.</p>
+      <p>Your backup is kept until you delete your account. League Room data is kept while you're a member (reactions for 7 days). Player alert settings are kept until you turn alerts off, or until Apple tells us the push token no longer works. Feedback is kept until it's no longer needed to follow up or improve the app; email us to have yours deleted sooner. Usage events are kept only as long as they're useful for improving the app.</p>
 
       <h2>Children</h2>
-      <p>PuckIQ is not directed to children under 13, and we don't knowingly collect personal information from them.</p>
+      <p>PuckIQ is not directed to children under 13, and we don't knowingly collect personal information from them. If you think a child under 13 has given us personal information, email us and we'll delete it.</p>
 
       <h2>Your choices and rights</h2>
-      <p>You can use PuckIQ without an account, turn off usage stats, leave a League Room, turn off player alerts, and delete your account in the app. To ask about or request deletion of any data we hold, email <a href="mailto:zlce.app@gmail.com">zlce.app@gmail.com</a>.</p>
+      <p>You can use PuckIQ without an account, edit or remove your teams in the app, turn off usage stats, leave a League Room, turn off player alerts, and delete your account in the app. To review, correct, or delete any data we hold, email <a href="mailto:zlce.app@gmail.com">zlce.app@gmail.com</a>.</p>
+
+      <h2>California residents</h2>
+      <p>We don't sell your personal information or share it for targeted advertising. You can ask us what we hold about you and ask us to delete it using the email above, and we won't treat you differently for asking.</p>
+      <p><strong>Do Not Track.</strong> PuckIQ doesn't track you over time or across other companies' apps and websites, and this website has no cookies or analytics. Because there is no cross-site tracking to stop, we don't change anything in response to a browser's Do Not Track signal. We don't allow other companies to collect information about you across sites through PuckIQ.</p>
 
       <h2>Changes</h2>
       <p>If this policy changes, we'll update it here and change the effective date above.</p>
